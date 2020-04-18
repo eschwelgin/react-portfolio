@@ -5,9 +5,9 @@ function Header() {
     return (
         <nav>
             <h1>Eric Schwelgin</h1>
-            <Link to="/contact">Contact</Link>
-            <Link to="/portfolio">Portfolio</Link>
-            <Link to="/">Home</Link>
+            <Link to="/react-portfolio/contact">Contact</Link>
+            <Link to="/react-portfolio/portfolio">Portfolio</Link>
+            <Link to="/react-portfolio/">Home</Link>
         </nav>
     )
 }
