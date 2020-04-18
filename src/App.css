@@ -1,38 +1,216 @@
-.App {
-  text-align: center;
+﻿/*STATIC BACKGROUND*/
+body {
+	/* background-image: url("assets/wood0.jpg"); */
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
+	font-family: Arial, Helvetica, sans-serif;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*START NAV*/
+nav {
+	overflow: hidden;
+	background-color: #333;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+	
+nav a {
+	float: right;
+	display: block;
+	color: #aaa;
+	text-align: center;
+	padding: 20px 20px 20px 20px;
+	text-decoration: none; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav a:hover {
+	background: #ddd;
+	color: black;
+}
+/*END NAV*/
+
+/*STYLE NAME*/
+nav h1 {
+	float: left;
+	display: block;
+	color: #aaa;
+	padding: 0px 0px 0px 15px;
+	font-weight: 600;
+	font-size: 1.2em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*CONTENT RESPECTS NAV*/
+/* article {
+	padding-top: 55px;
+} */
+nav {
+	z-index: 15;
 }
 
-.App-link {
-  color: #61dafb;
+/*PORTFOLIO*/
+/*WRAP TEXT AROUND HEADSHOT*/
+.headshot {
+	margin: 0px 15px 0px 0px;
+	float: left;
+} 
+
+/*HEADINGS IN DIVS*/ 
+.bbox h1 {
+    border-bottom: 3px solid #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*BOXES MAIN*/ 
+
+.bbox:first-of-type {
+	margin: 70px 20px 20px 20px; 
+	padding-top: 1px;
+  	padding-right: 20px;
+  	padding-bottom: 5px;
+  	padding-left: 20px;
+	border-radius: 3px; 
+	background: rgba(255, 255, 255, .7);
+	position: relative;
+	z-index: 10;
+	text-align:center;
+	
+	/*make responsive*/ 
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+  	height: auto;
+}
+
+.bbox {
+	/*create box*/ 
+	margin: 20px 20px 20px 20px; 
+	padding-top: 1px;
+  	padding-right: 20px;
+  	padding-bottom: 5px;
+  	padding-left: 20px;
+	border-radius: 3px; 
+	background: rgba(255, 255, 255, .7);
+	position: relative;
+	z-index: 10;
+	text-align:center;
+	
+	/*make responsive*/ 
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+  	height: auto;
+}
+
+.bbox>p {
+	line-height: 1.5em;
+}
+
+/*OVERLAY*/
+.overlay {
+	display: inline-block;
+
+}
+
+.overlay img {
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+}
+
+.overlay h3{
+    background-color: rgba(75, 75, 75, 0.7);
+	width: 100%;
+    line-height: 2.5em;
+    color: white;
+    font-weight: 500;
+	font-size: 1.5em;
+	margin: 0px;
+}
+
+.row {
+	text-align: center;
+}
+
+.col-sm-6.overlay {
+	display: inline-block;
+	min-height: 300px;
+}
+
+.col-sm-6.overlay>p {
+	padding: 10px 0px 10px 0px;
+}
+
+.overlay>img {
+	margin-top: 20px;
+}
+
+.overlay>p {
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+a>button {
+	position: inline-block;
+	text-align: center;
+	background-color: rgba(75, 75, 75, 0.7);
+	border: none;
+	padding: 10px 20px 10px 20px;
+	margin: 20px 10px 20px 10px;
+	color: white;
+}
+
+/*CONTACT*/
+textarea, input {
+	width: 98%;
+	margin: 5px;
+}
+
+textarea {
+	height: 150px;
+}
+
+form>button {
+	position: inline-block;
+	background-color: #666;
+	border: 1px solid black;
+	padding: 10px 20px 10px 20px;
+	margin: 20px 10px 20px 10px;
+}
+
+p {
+	margin: 5px 5px 5px 5px;
+	padding: 5px 5px 5px 5px;
+}
+
+footer {
+	overflow: hidden;
+	background-color: #333;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 15;
+}
+
+/*RESPONSIVE BOXES*/
+@media screen and (min-width: 480px) {
+.bbox {
+	max-width: 80%;
+	}
+
+.lbbox {
+	max-width: 80%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+.bbox {
+	max-width: 50%;
+	}
+.lbbox {
+	max-width: 50%;
+
+	}
 }
